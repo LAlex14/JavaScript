@@ -1,5 +1,7 @@
 //! Functions
 
+//* function declaration is hoisted before var declaration
+
 { (function () { }()) && (function () { })() } //* IIFE syntax
 
 function foo() { }              //* function declaration

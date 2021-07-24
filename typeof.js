@@ -3,8 +3,11 @@
 typeof 7;
 typeof (7);
 
-//* types(8):   null,   bigInt, undefined, boolean, number, string, object, symbol
-//* typeof(8):  object, bigint, undefined, boolean, number, string, object, symbol
+//* types(8):   null,   bigInt, undefined, boolean, number, string, object, Symbol
+//* typeof(8):  object, bigint, undefined, boolean, number, string, object, Symbol
+//* primiteve:  null,   bigInt, undefined, boolean, number, string, Symbol
+
+//* false == Nan, null, '', undefined, false, 0
 
 let types = {
     1: {
@@ -66,7 +69,7 @@ console.table(types);
 * *│    4    │  'string'   │  'string'   │           [ '', '1', String(1), typeof (1) ]           │
 * *│    5    │  'bigInt'   │  'bigint'   │                           7n                           │
 * *│    6    │  'symbol'   │  'symbol'   │         [ Symbol(), Symbol(Symbol.iterator) ]          │
-* *│    7    │  'object'   │  'object'   │     [ [], {}, /regex/, 2021-07-24T11:26:55.932Z ]      │
+* *│    7    │  'object'   │  'object'   │             [ [], {}, /regex/, new (...) ]             │
 * *│    8    │ 'function'  │ 'function'  │  [ [Object, Math.sin, class C { }, function () { }] ]  │
 * *│    9    │   'null'    │  'object'   │                          null                          │
 * *└─────────┴─────────────┴─────────────┴────────────────────────────────────────────────────────┘ 
@@ -75,10 +78,13 @@ console.table(types);
 
 {
     typeof undeclaredVariable === 'undefined';
+    typeof Object === 'function'; // true
+    undefined * undefined == NaN; // true
 
     // typeof newLetVariable; // ReferenceError
     // typeof newConstVariable; // ReferenceError
     // typeof newClass; // ReferenceError
+    // function arguments is an object (except arrow fct)
 
     let newLetVariable;
     const newConstVariable = 'hello';
@@ -96,4 +102,5 @@ console.table(types);
     Object.is(NaN, NaN);    // true
 
     Number.MIN_VALUE > 0;   // true
+
 }
