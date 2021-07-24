@@ -26,7 +26,7 @@ array.copyWithin(target, start, end); // copies array elements to another positi
 array.splice(start, deleteCount, itemsToAdd); //* Remove an item by index, return removed items => array.splice(start, deleteCount)
 
 array.slice() //* this is how to make a array copy
-array.slice(start, end) //* returns a copy of a portion of an array from start to end (end not included)
+array.slice(start, end) //* returns a array copy of a portion of array from start to end (end not included)
 
 array.sort((firstEl, secondEl) => { }); //* sort by fctn, default sort is ascending in alphabetical
 array.concat(items); // concat arrays, return concated array, not change current arr

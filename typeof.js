@@ -1,12 +1,9 @@
 //! typeof
 
-typeof 7;
-typeof (7);
-
 //* types(8):   null,   bigInt, undefined, boolean, number, string, object, Symbol
 //* typeof(8):  object, bigint, undefined, boolean, number, string, object, Symbol
-//* primiteve:  null,   bigInt, undefined, boolean, number, string, Symbol
 
+//* primiteve:  null,   bigInt, undefined, boolean, number, string, Symbol
 //* false == Nan, null, '', undefined, false, 0
 
 let types = {
@@ -60,19 +57,19 @@ let types = {
 
 console.table(types);
 /**
-* *┌─────────┬─────────────┬─────────────┬────────────────────────────────────────────────────────┐
-* *│ (index) │    type     │   typeof    │                        examples                        │
-* *├─────────┼─────────────┼─────────────┼────────────────────────────────────────────────────────┤
-* *│    1    │ 'undefined' │ 'undefined' │                       undefined                        │
-* *│    2    │  'boolean'  │  'boolean'  │                    [ true, false ]                     │
-* *│    3    │  'number'   │  'number'   │       [ NaN, 3.14, 14, Infinity, Number('shoe') ]      │
-* *│    4    │  'string'   │  'string'   │           [ '', '1', String(1), typeof (1) ]           │
-* *│    5    │  'bigInt'   │  'bigint'   │                           7n                           │
-* *│    6    │  'symbol'   │  'symbol'   │         [ Symbol(), Symbol(Symbol.iterator) ]          │
-* *│    7    │  'object'   │  'object'   │             [ [], {}, /regex/, new (...) ]             │
-* *│    8    │ 'function'  │ 'function'  │  [ [Object, Math.sin, class C { }, function () { }] ]  │
-* *│    9    │   'null'    │  'object'   │                          null                          │
-* *└─────────┴─────────────┴─────────────┴────────────────────────────────────────────────────────┘ 
+* *┌─────────────┬─────────────┬────────────────────────────────────────────────────────┐
+* *│    type     │   typeof    │                        examples                        │
+* *├─────────────┼─────────────┼────────────────────────────────────────────────────────┤
+* *│ 'undefined' │ 'undefined' │                       undefined                        │
+* *│  'boolean'  │  'boolean'  │                    [ true, false ]                     │
+* *│  'number'   │  'number'   │       [ NaN, 3.14, 14, Infinity, Number('shoe') ]      │
+* *│  'string'   │  'string'   │           [ '', '1', String(1), typeof (1) ]           │
+* *│  'bigInt'   │  'bigint'   │                           7n                           │
+* *│  'symbol'   │  'symbol'   │         [ Symbol(), Symbol(Symbol.iterator) ]          │
+* *│  'object'   │  'object'   │             [ [], {}, /regex/, new (...) ]             │
+* *│ 'function'  │ 'function'  │  [ [Object, Math.sin, class C { }, function () { }] ]  │
+* *│   'null'    │  'object'   │                          null                          │
+* *└─────────────┴─────────────┴────────────────────────────────────────────────────────┘ 
 */
 
 
@@ -102,5 +99,4 @@ console.table(types);
     Object.is(NaN, NaN);    // true
 
     Number.MIN_VALUE > 0;   // true
-
 }
