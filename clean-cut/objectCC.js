@@ -28,13 +28,16 @@ let obj = new Object, obj = new Object(value);
 console.log('propertyName' in myobj);
 object1.hasOwnProperty('propertyName'); // => return true or false
 
+Object.is(value1, value2);
+Object.assign(targetObject, ...propertySourcesObjects);
+Object.entries(object1) // [key, value] pairs. 
+Object.fromEntries([['foo', 'bar'], ['baz', 42]]); // {foo: "bar", baz: 42}
+Object.values(object1);
+
 Object.getOwnPropertyNames(object1); // => return ["a", "b", "c"]
 Object.getOwnPropertyDescriptor(object1, 'property1'); // => descriptor1.value
 Object.getOwnPropertyDescriptors(object1);
 // obj property descriptors: value, writable, get, set, configurable, enumerable
-
-Object.is(value1, value2);
-Object.assign(targetObject, ...propertySourcesObjects);
 object1.propertyIsEnumerable('property1');
 
 Object.defineProperty(object1, 'propertyName', {
@@ -50,10 +53,6 @@ Object.defineProperties(object1, {
     propertyN: {}
 });
 
-Object.entries(object1) // [key, value] pairs. 
-Object.fromEntries([['foo', 'bar'], ['baz', 42]]); // {foo: "bar", baz: 42}
-Object.values(object1);
-
 Object.preventExtensions(object1);
 Object.isExtensible(object1); // prevents to add new properties
 
@@ -64,10 +63,9 @@ Object.isSealed(object1) // return true or false
 Object.freeze(obj);
 Object.isFrozen(object1); // seal + non-writable.
 
-Object.getPrototypeOf();
 const prototype1 = {};
 const object1 = Object.create(prototype1);
-console.log(Object.getPrototypeOf(object1) === prototype1); // true
+Object.getPrototypeOf(object1) === prototype1; // true
 
 //! from arrays
 Object.keys([1, 2, , , 3, , 5]);

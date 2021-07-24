@@ -33,24 +33,24 @@ array.concat(items);
 array.flat(depth);
 array.flatMap((element, index, array) => { });
 
+array.every((element, index, array) => { });
+array.some((element, index, array) => { });
+
+array.filter((element, index, array) => { });
+array.find((element, index, array) => { });
+array.findIndex((element, index, array) => { });
+
+array.includes(searchElement, fromIndex);
+array.indexOf(searchElement, fromIndex); // -1 if not
+array.lastIndexOf(searchElement, fromIndex);
+
 array.reduce((accumulator, element, index, array) => { }, initialValue);
 array.reduceRight((accumulator, element, index, array) => { }, initialValue);
 
-array.entries(); //* Object { value: [index, element], done: false }
-array.values(); // Object { value: element, done: false }
+array.entries(); //* { value: [index, element], done: false }
+array.values(); //  { value: element, done: false }
 console.log([...[1, 2, , , 3, , 5].keys()]);
 console.log(Object.keys([1, 2, , , 3, , 5]));
-
-array.every((element, index, array) => { element == index + 2 });
-array.some((element, index, array) => { element == index + 2 });
-
-array.filter((element, index, array) => element == index + 2);
-array.find((element, index, array) => element == index + 2);
-array.findIndex((element, index, array) => element == index + 2);
-
-array.includes(searchElement, fromIndex);
-array.indexOf(searchElement, fromIndex);
-array.lastIndexOf(searchElement, fromIndex); // -1 if not
 
 //!--------------------------------------------------
 Array.from(array, (element, index) => element + index);
