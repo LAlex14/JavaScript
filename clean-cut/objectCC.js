@@ -2,6 +2,9 @@
 
 let obj = new Object, obj = new Object(value);
 
+typeof yourObj === 'object' && yourObj !== null && !Array.isArray(yourObj);
+// check if obj
+
 //* first method
 {
     function Tree(name) {
