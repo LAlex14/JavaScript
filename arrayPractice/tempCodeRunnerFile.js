@@ -1,4 +1,4 @@
-// // 1. Write a function that accepts an array of strings. Return the longest string.
+// 1. Write a function that accepts an array of strings. Return the longest string.
 // {
 //     const longestString = (arr) => {
 //         return arr.reduce((acc, el) => el.length > acc.length ? el : acc, '');
@@ -43,24 +43,3 @@
 //     }
 //     setTimeout(log, 100);
 // }
-
-// foo();
-// var foo;
-// function foo() {
-//     console.log(1);
-// }
-// foo = function () {
-//     console.log(2);
-// }
-// foo();
-
-function foo() {
-    console.log(a)
-}
-function bar() {
-    var a = 3;
-    foo();
-}
-
-var a = 2;
-bar();
