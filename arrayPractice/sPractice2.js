@@ -22,3 +22,6 @@
     console.log(nr3(numbers3));
 }
 
+const equals = (a, b) =>
+    a.length === b.length &&
+    a.every((v, i) => v === b[i]);
