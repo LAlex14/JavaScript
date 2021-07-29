@@ -8,10 +8,7 @@ console.log('1. Fill. Write a function that creates a new array with given value
   * @param {?} value - value to fill 
   * @returns {Array} 
 */
-    const fill = (arraySize, value) => {
-        let arr = new Array(arraySize);
-        return arr.fill(value)
-    }
+    const fill = (arraySize, value) => new Array(arraySize).fill(value);
     const data = 3;
     const valueToFill = 'a';
     console.log(fill(data, valueToFill)) // ['a', 'a', 'a']

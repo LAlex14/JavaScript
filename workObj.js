@@ -15,7 +15,7 @@ function displayYear() {
 
 function Car(make, model, year) {
     this.make = make, this.model = model, this.year = year,
-        this.displayYear = () => console.log(this.year);
+        this.displayYear = displayYear;
 }
 
 // Car.prototype.color = null; // add properties
@@ -24,51 +24,51 @@ function Car(make, model, year) {
 
 var mustang = new Car(123, 456, 789);
 
-console.log(mustang)
+// console.log(mustang)
 
 mustang.displayYear();
 
-function dModel() {
-    console.log(this.model);
-}
+// function dModel() {
+//     console.log(this.model);
+// }
 
-mustang.dModel = dModel;
-mustang.dModel();
+// mustang.dModel = dModel;
+// mustang.dModel();
 
-var house = {
-    make: 1990,
-    // get b() {
-    //     return this.make;
-    // },
-    // set c(x) {
-    //     this.make += x;
-    // }
-}
+// var house = {
+//     make: 1990,
+//     // get b() {
+//     //     return this.make;
+//     // },
+//     // set c(x) {
+//     //     this.make += x;
+//     // }
+// }
 
-Object.defineProperties(house, {
-    'b': {
-        get: function () { return this.make; }
-    },
-    'c': {
-        set: function () { this.make += 10; }
-    }
-})
+// Object.defineProperties(house, {
+//     'b': {
+//         get: function () { return this.make; }
+//     },
+//     'c': {
+//         set: function () { this.make += 10; }
+//     }
+// })
 
-// house.c = 50;
-house.c = 10; // initiated set method
-// delete house.b;
-console.log(house.b);
+// // house.c = 50;
+// house.c = 10; // initiated set method
+// // delete house.b;
+// console.log(house.b);
 
-var myobj = new Object;
-myobj.a = 5;
-delete myobj.a;
+// var myobj = new Object;
+// myobj.a = 5;
+// delete myobj.a;
 
-console.log('a' in myobj)
+// console.log('a' in myobj)
 
 
-const name = "Brendan";
-const obj = {
-    [name]: 'dan'
-}
+// const name = "Brendan";
+// const obj = {
+//     [name]: 'dan'
+// }
 
-console.log(obj['Brendan'])
+// console.log(obj['Brendan'])

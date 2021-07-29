@@ -27,9 +27,12 @@
 
 // let morty = { adress: rick.adress };
 
-// rick = {
-//     adress: { city: "c-13744" }
-// };
+// // rick = {
+// //     adress: { city: "c-13744" }
+// // };
+
+// rick.adress = { city: "c-13744" }
+// console.log(rick.adress);
 
 // console.log(morty.adress.city);
 
@@ -44,23 +47,29 @@
 //     setTimeout(log, 100);
 // }
 
-// foo();
-// var foo;
+
+
 // function foo() {
 //     console.log(1);
 // }
+
+// var foo;
+
+// foo();
+
 // foo = function () {
 //     console.log(2);
 // }
+
 // foo();
 
-function foo() {
-    console.log(a)
-}
-function bar() {
-    var a = 3;
-    foo();
-}
+// function foo() {
+//     console.log(a)
+// }
+// function bar() {
+//     var a = 3;
+//     foo();
+// }
 
-var a = 2;
-bar();
+// var a = 2;
+// bar();
