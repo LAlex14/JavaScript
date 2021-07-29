@@ -37,9 +37,14 @@ const ex1 = orders.filter(order => (order.customerId === '234') && !order.delive
 // console.log(ex1);
 
 // 2) Create a new property on each order with the total price of items ordered.
-const ex2 = orders.map(order => ({
+// const ex2 = orders.map(order => ({
+//     ...order, totalPrice: order.items.reduce((acc, item) => acc + item.price, 0)
+// }));
+
+orders.forEach((order, index) => orders[index] = {
     ...order, totalPrice: order.items.reduce((acc, item) => acc + item.price, 0)
-}));
+});
+console.log(orders);
 // console.log(ex2);
 
 // 3) Have all the orders been delivered?

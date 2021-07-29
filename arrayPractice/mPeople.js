@@ -17,7 +17,7 @@ const people = [
 
 // 1) What is the average income of all the people in the array?
 const averageIncome = +(people.reduce((acc, person) => acc += +person.salary, 0) / people.length).toFixed(2);
-// console.log(averageIncome);
+console.log(averageIncome);
 
 // 2) Who are the people that are currently older than 30?
 
@@ -45,4 +45,4 @@ const departments = people.reduce((acc, person) => ({
 }), {});
 // console.log(departments);
 
-console.log(people.at(2));
+// console.log(people.at(2));
